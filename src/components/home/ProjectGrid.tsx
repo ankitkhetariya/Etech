@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { ExternalLink, MapPin, Zap } from "lucide-react";
+import { ExternalLink, MapPin, Zap, ArrowRight } from "lucide-react";
 
 const projects = [
   {
