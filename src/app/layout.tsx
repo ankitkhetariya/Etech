@@ -7,8 +7,9 @@ import Footer from "@/components/layout/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Helios Solar | Future of Energy",
-  description: "Modern solar solutions for a sustainable lifestyle.",
+  title: "Etech Energy | Engineering Connections",
+  description:
+    "India's premier Solar EPC company providing sustainable engineering solutions for Industrial, Commercial, and Residential sectors.",
 };
 
 export default function RootLayout({
