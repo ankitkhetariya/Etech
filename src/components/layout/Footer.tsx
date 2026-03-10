@@ -3,11 +3,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import {
   Mail,
-  Phone,
-  MapPin,
   Instagram,
   Linkedin,
-  MessageCircle,
   Facebook,
   ArrowUpRight,
 } from "lucide-react";
@@ -35,7 +32,7 @@ export default function Footer() {
         viewport={{ once: true }}
         className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12"
       >
-        {/* Brand Bio & Real Social Links */}
+        {/* Brand Bio & Social Links */}
         <motion.div
           variants={itemVariants}
           className="col-span-1 md:col-span-1"
@@ -48,7 +45,6 @@ export default function Footer() {
             solutions for Industrial, Commercial, and Residential sectors.
           </p>
           <div className="flex gap-4">
-            {/* Real Facebook Link */}
             <motion.a
               href="https://www.facebook.com/etechenergyinfra/"
               target="_blank"
@@ -57,7 +53,6 @@ export default function Footer() {
             >
               <Facebook size={20} />
             </motion.a>
-            {/* Real Instagram Link */}
             <motion.a
               href="https://www.instagram.com/etechenergy/"
               target="_blank"
@@ -66,7 +61,6 @@ export default function Footer() {
             >
               <Instagram size={20} />
             </motion.a>
-            {/* Real LinkedIn Link */}
             <motion.a
               href="https://www.linkedin.com/company/etech-energy-infra/"
               target="_blank"
@@ -134,37 +128,76 @@ export default function Footer() {
           </ul>
         </motion.div>
 
-        {/* Official Contact Info */}
-        <motion.div variants={itemVariants} className="md:ml-auto">
-          <h4 className="text-white font-bold uppercase tracking-[0.2em] text-[10px] mb-8">
+        {/* Official Contact Info (Updated Layout for Dual Branches) */}
+        <motion.div variants={itemVariants} className="md:ml-auto w-full">
+          <h4 className="text-white font-bold uppercase tracking-[0.2em] text-[10px] mb-6">
             Contact Info
           </h4>
-          <div className="flex flex-col gap-6 text-sm">
-            <div className="flex items-start gap-4">
-              <div className="p-2 bg-[#10B981]/10 rounded-lg text-[#10B981]">
-                <MapPin size={18} />
+
+          <div className="flex flex-col gap-6">
+            {/* Rajkot Head Office */}
+            <div className="group">
+              <h5 className="text-[#10B981] text-[10px] font-bold uppercase tracking-widest mb-1.5 flex items-center gap-2">
+                Rajkot Head Office
+              </h5>
+              <p className="text-xs text-slate-300 leading-relaxed break-words mb-2">
+                224 & 225, RK World Tower, 150 Feet Ring Road, Sheetal Park,
+                Rajkot, Gujarat - 360006
+              </p>
+              <div className="text-xs font-bold text-slate-200">
+                <a
+                  href="tel:+919687220485"
+                  className="hover:text-[#10B981] transition-colors"
+                >
+                  +91 96872 20485
+                </a>
+                <span className="mx-2 text-slate-600">|</span>
+                <a
+                  href="tel:+919687220486"
+                  className="hover:text-[#10B981] transition-colors"
+                >
+                  +91 96872 20486
+                </a>
               </div>
-              <span className="leading-relaxed">
-                A-404, Siddhivinayak Business Tower,
-                <br />
-                Near Kataria Arcade, Makarba,
-                <br />
-                Ahmedabad, Gujarat 380051
-              </span>
             </div>
-            <div className="flex items-center gap-4 group cursor-pointer">
-              <div className="p-2 bg-[#10B981]/10 rounded-lg text-[#10B981] group-hover:bg-[#10B981] group-hover:text-white transition-all">
-                <Phone size={18} />
+
+            {/* Ahmedabad Branch */}
+            <div className="group">
+              <h5 className="text-[#10B981] text-[10px] font-bold uppercase tracking-widest mb-1.5 flex items-center gap-2">
+                Ahmedabad Branch
+              </h5>
+              <p className="text-xs text-slate-300 leading-relaxed break-words mb-2">
+                306, Arth Business Center, Opp Torrent Sub Station, SP Ring
+                Road, Nikol, Ahmedabad, Gujarat - 382350
+              </p>
+              <div className="text-xs font-bold text-slate-200">
+                <a
+                  href="tel:+919276861882"
+                  className="hover:text-[#10B981] transition-colors"
+                >
+                  +91 92768 61882
+                </a>
+                <span className="mx-2 text-slate-600">|</span>
+                <a
+                  href="tel:+919537971075"
+                  className="hover:text-[#10B981] transition-colors"
+                >
+                  +91 95379 71075
+                </a>
               </div>
-              <span className="font-bold text-slate-200">+91 98982 45842</span>
             </div>
-            <div className="flex items-center gap-4 group cursor-pointer">
-              <div className="p-2 bg-[#10B981]/10 rounded-lg text-[#10B981] group-hover:bg-[#10B981] group-hover:text-white transition-all">
-                <Mail size={18} />
+
+            {/* Official Email */}
+            <div className="flex items-center gap-3 mt-2 group cursor-pointer w-fit">
+              <div className="p-2 bg-[#10B981]/10 rounded-lg text-[#10B981] group-hover:bg-[#10B981] group-hover:text-white transition-all shrink-0">
+                <Mail size={16} />
               </div>
-              <span className="font-bold text-slate-200">
+              <a
+                href="mailto:info@etechenergy.com"
+                className="font-bold text-slate-200 text-sm hover:text-[#10B981] transition-colors"
+              >
                 info@etechenergy.com
-              </span>
+              </a>
             </div>
           </div>
         </motion.div>
@@ -175,7 +208,7 @@ export default function Footer() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
-        className="container mx-auto px-6 mt-20 pt-10 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6"
+        className="container mx-auto px-6 mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6"
       >
         <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-500 text-center">
           © 2026 Etech Energy Infra. Engineering Sustainable Futures.
